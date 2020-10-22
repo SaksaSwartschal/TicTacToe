@@ -1,16 +1,20 @@
 # TicTacToe
 
-* TicTacToe über GUI ausgeben
-
 * Spieler1 immer X
 * Spieler2 immer O
 
-* Spiel soll auf einem Netzwerk basieren
+* Spiel soll auf einem Bildschirm ausgegeben werden
 
-* Die Eingabe von X/O soll über Tastatur erfogen
+* Spielfeld besteht aus einem 2Dimensionalen Array von 1-9 und wenn ein Spieler eine Zahl von 1-9 auswählt wird diese Zahl mit X/O überschrieben
 
-* Beim Gewinner soll am Bildschirm der Text "You won!" , beim Verlierer soll "You lost!" und falls Untentschieden soll "Tie" ausgegeben werden.
+* Die Eingabe von 1-9 soll über Tastatur erfogen
+
+* Wenn Spiel beendet ist dann soll am Bildschirm "Player1 win", "Player2 win" oder "Tie" ausgegeben werden.
 
 ## Code
 
-* Game: Java
+* Game: C
+
+### Dokumentation
+
+* Wenn Programm fertig geschrieben Dokumentation wie ist das Soiel aufgebaut und warum wechsel von Java auf C
