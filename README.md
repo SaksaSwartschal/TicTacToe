@@ -17,4 +17,4 @@
 
 ### Dokumentation
 
-* Wenn Programm fertig geschrieben Dokumentation wie ist das Soiel aufgebaut und warum wechsel von Java auf C
+* Wenn Programm fertig geschrieben Dokumentation wie ist das Spiel aufgebaut ist und warum wechsel von Java auf C
