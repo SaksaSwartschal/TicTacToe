@@ -1,7 +1,7 @@
 # TicTacToe
 
-* Spieler1 immer X
-* Spieler2 immer O
+* Spieler1 immer O
+* Spieler2 immer X
 
 * Spiel soll auf einem Bildschirm ausgegeben werden
 
@@ -9,7 +9,7 @@
 
 * Die Eingabe von 1-9 soll über Tastatur erfogen
 
-* Wenn Spiel beendet ist dann soll am Bildschirm "Player1 win", "Player2 win" oder "Tie" ausgegeben werden.
+* Wenn Spiel beendet ist dann soll am Bildschirm "Player1 win" oder "Player2 win" ausgegeben werden.
 
 ## Code
 
