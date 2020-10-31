@@ -4,13 +4,18 @@
 int main()
 {
     char tttfeld[9]= {'0','1','2','3','4','5','6','7','8'};
-    int auswahl;
     int felddl;
     int feld;
 
-    printf("%c  %c  %c\n", tttfeld[0], tttfeld[1], tttfeld[2]);
-    printf("%c  %c  %c\n", tttfeld[3], tttfeld[4], tttfeld[5]);
-    printf("%c  %c  %c\n", tttfeld[6], tttfeld[7], tttfeld[8]);
+            printf("     |     |     \n");
+            printf("  %c  |  %c  |  %c\n", tttfeld[0], tttfeld[1], tttfeld[2]);
+            printf("_____|_____|_____\n");
+            printf("     |     |      \n");
+            printf("  %c  |  %c  |  %c\n", tttfeld[3], tttfeld[4], tttfeld[5]);
+            printf("_____|_____|_____\n");
+            printf("     |     |      \n");
+            printf("  %c  |  %c  |  %c\n", tttfeld[6], tttfeld[7], tttfeld[8]);
+            printf("     |     |      \n");
 
 
     for(felddl=0;felddl<=8;felddl++)
@@ -29,53 +34,65 @@ int main()
                   feld>8);
 
                 tttfeld[feld]='O';
-                printf("%c  %c  %c\n", tttfeld[0], tttfeld[1], tttfeld[2]);
-                printf("%c  %c  %c\n", tttfeld[3], tttfeld[4], tttfeld[5]);
-                printf("%c  %c  %c\n", tttfeld[6], tttfeld[7], tttfeld[8]);
+                printf("     |     |     \n");
+                printf("  %c  |  %c  |  %c\n", tttfeld[0], tttfeld[1], tttfeld[2]);
+                printf("_____|_____|_____\n");
+                printf("     |     |      \n");
+                printf("  %c  |  %c  |  %c\n", tttfeld[3], tttfeld[4], tttfeld[5]);
+                printf("_____|_____|_____\n");
+                printf("     |     |      \n");
+                printf("  %c  |  %c  |  %c\n", tttfeld[6], tttfeld[7], tttfeld[8]);
+                printf("     |     |      \n");
             }
         else if(felddl== 1 ||
                 felddl== 3 ||
                 felddl== 5 ||
                 felddl== 7){
 
-                do
-                {
-                    printf("Spieler 2 t\x84tigen Sie Ihre Auswahl: ");
-                    scanf("%d", &feld);
+            do
+            {
+                printf("Spieler 2 t\x84tigen Sie Ihre Auswahl: ");
+                scanf("%d", &feld);
+            }
+            while(feld<0 ||
+                  feld>8);
+
+                tttfeld[feld]='X';
+                printf("     |     |     \n");
+                printf("  %c  |  %c  |  %c\n", tttfeld[0], tttfeld[1], tttfeld[2]);
+                printf("_____|_____|_____\n");
+                printf("     |     |      \n");
+                printf("  %c  |  %c  |  %c\n", tttfeld[3], tttfeld[4], tttfeld[5]);
+                printf("_____|_____|_____\n");
+                printf("     |     |      \n");
+                printf("  %c  |  %c  |  %c\n", tttfeld[6], tttfeld[7], tttfeld[8]);
+                printf("     |     |      \n");
                 }
-                while(feld<0 ||
-                      feld>8);
-
-                    tttfeld[feld]='X';
-                    printf("%c  %c  %c\n", tttfeld[0], tttfeld[1], tttfeld[2]);
-                    printf("%c  %c  %c\n", tttfeld[3], tttfeld[4], tttfeld[5]);
-                    printf("%c  %c  %c\n", tttfeld[6], tttfeld[7], tttfeld[8]);
-                }
-    if(((tttfeld[0]=='O') && (tttfeld[1]=='O') && (tttfeld[2]=='O')) ||
-       ((tttfeld[3]=='O') && (tttfeld[4]=='O') && (tttfeld[5]=='O')) ||
-       ((tttfeld[6]=='O') && (tttfeld[7]=='O') && (tttfeld[9]=='O')) ||
-       ((tttfeld[0]=='O') && (tttfeld[3]=='O') && (tttfeld[6]=='O')) ||
-       ((tttfeld[1]=='O') && (tttfeld[4]=='O') && (tttfeld[7]=='O')) ||
-       ((tttfeld[2]=='O') && (tttfeld[5]=='O') && (tttfeld[8]=='O')) ||
-       ((tttfeld[0]=='O') && (tttfeld[4]=='O') && (tttfeld[8]=='O')) ||
-       ((tttfeld[2]=='O') && (tttfeld[4]=='O') && (tttfeld[6]=='O'))){
+        if(((tttfeld[0]=='O') && (tttfeld[1]=='O') && (tttfeld[2]=='O')) ||
+           ((tttfeld[3]=='O') && (tttfeld[4]=='O') && (tttfeld[5]=='O')) ||
+           ((tttfeld[6]=='O') && (tttfeld[7]=='O') && (tttfeld[9]=='O')) ||
+           ((tttfeld[0]=='O') && (tttfeld[3]=='O') && (tttfeld[6]=='O')) ||
+           ((tttfeld[1]=='O') && (tttfeld[4]=='O') && (tttfeld[7]=='O')) ||
+           ((tttfeld[2]=='O') && (tttfeld[5]=='O') && (tttfeld[8]=='O')) ||
+           ((tttfeld[0]=='O') && (tttfeld[4]=='O') && (tttfeld[8]=='O')) ||
+           ((tttfeld[2]=='O') && (tttfeld[4]=='O') && (tttfeld[6]=='O'))){
 
 
-        printf("\nSpieler 1 hat gewonnen!");
-        return 0;
-    }
-    else if(((tttfeld[0]=='X') && (tttfeld[1]=='X') && (tttfeld[2]=='X')) ||
-            ((tttfeld[3]=='X') && (tttfeld[4]=='X') && (tttfeld[5]=='X')) ||
-            ((tttfeld[6]=='X') && (tttfeld[7]=='X') && (tttfeld[9]=='X')) ||
-            ((tttfeld[0]=='X') && (tttfeld[3]=='X') && (tttfeld[6]=='X')) ||
-            ((tttfeld[1]=='X') && (tttfeld[4]=='X') && (tttfeld[7]=='X')) ||
-            ((tttfeld[2]=='X') && (tttfeld[5]=='X') && (tttfeld[8]=='X')) ||
-            ((tttfeld[0]=='X') && (tttfeld[4]=='X') && (tttfeld[8]=='X')) ||
-            ((tttfeld[2]=='X') && (tttfeld[4]=='X') && (tttfeld[6]=='X'))){
+            printf("\nPlayer1 win!");
+            return 0;
+        }
+        else if(((tttfeld[0]=='X') && (tttfeld[1]=='X') && (tttfeld[2]=='X')) ||
+                ((tttfeld[3]=='X') && (tttfeld[4]=='X') && (tttfeld[5]=='X')) ||
+                ((tttfeld[6]=='X') && (tttfeld[7]=='X') && (tttfeld[9]=='X')) ||
+                ((tttfeld[0]=='X') && (tttfeld[3]=='X') && (tttfeld[6]=='X')) ||
+                ((tttfeld[1]=='X') && (tttfeld[4]=='X') && (tttfeld[7]=='X')) ||
+                ((tttfeld[2]=='X') && (tttfeld[5]=='X') && (tttfeld[8]=='X')) ||
+                ((tttfeld[0]=='X') && (tttfeld[4]=='X') && (tttfeld[8]=='X')) ||
+                ((tttfeld[2]=='X') && (tttfeld[4]=='X') && (tttfeld[6]=='X'))){
 
 
-        printf("\nSpieler 2 hat gewonnen!");
-        return 0;
+            printf("\nPlayer2 win!");
+            return 0;
     }
     }
 }
